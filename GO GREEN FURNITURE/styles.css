@@ -19,7 +19,12 @@ header {
 
 .nav-side{
     display: flex;
-    gap: 20px;
+    gap: 15px;
+}
+
+nav{
+    align-content: center;
+    margin-right: 50px;
 }
 
 .logo-container {
@@ -95,12 +100,15 @@ nav ul li:hover .dropdown {
 }
 
 
+
+
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
     position: relative;
+    
 }
 
 nav a:hover{
@@ -232,6 +240,83 @@ footer {
 
 .shop-now:hover {
     background: #1e5739;
+}
+
+/* Catalog Page */
+
+.catalogue-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.catalogue-card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalogue-card {
+    height: 300px;
+    width: 400px;
+    position: relative; 
+    border-radius: 20px;
+    overflow: hidden; 
+    
+}
+
+.catalogue-card-picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+
+.catalogue-card-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 8px 12px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.catalogue-card-text:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.catalogue-card-arrow {
+    font-size: 26px; 
+    animation: moveArrow 1s infinite ease-in-out;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(8px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
 }
 
 
